@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.EvaluationMapper" >
+    <insert id="insertEvaluation" parameterType="com.ssm.po.MyEvaluation">
+        INSERT INTO evaluation
+        (taskid,content,isEvaluation,state)
+        VALUES (#{taskid},#{content},#{isEvaluation},#{state})
+    </insert>
+
+    <!-- 结果集封装 -->
+
+    <!-- 使用resultMap映射实体类和字段之间的一一对应关系 -->
+
+    <resultMap type="com.ssm.po.MyEvaluation"  id="EvaluationTask">
+
+        <id property="taskid" column="taskid"/>
+
+        <result property="content" column="content"/>
+
+        <result property="isEvaluation" column="isEvaluation"></result>
+
+        <result property="state" column="state"></result>
+
+        <result property="hierarchy" column="hierarchy"></result>
+
+        <association property="task" javaType="com.ssm.po.Task">
+
+            <id property="taskid" column="taskid"/>
+            <result property="publishUserId" column="publish_user_id"/>
+            <result property="publishUserName" column="publish_user_name"/>
+            <result property="publishSchoolId" column="publish_school_id"/>
+            <result property="acceptUserId" column="accept_user_id"/>
+            <result property="reward" column="reward"/>
+            <result property="addtime" column="addtime"/>
+            <result property="endtime" column="endtime"/>
+            <result property="taskname" column="taskname"/>
+            <result property="taskcontext" column="taskcontext"/>
+            <result property="state" column="state"/>
+
+        </association>
+
+    </resultMap>
+    <select id="getEvaluationByTaskidAndUserId" resultMap="EvaluationTask" parameterType="int">
+
+        SELECT * FROM evaluation e,task t WHERE e.`taskid`= t.`taskid` AND t.`publish_user_id`=#{userId} AND e.`state` =3
+
+    </select>
+
+    <update id="updateStateByTaskId" parameterType="int">
+        update evaluation
+        set state = 3,
+        where taskid = #{taskid}
+    </update>
+
+    <update id="updateEvaluationBytaskid" parameterType="com.ssm.po.MyEvaluation">
+        UPDATE evaluation
+        SET
+            content = #{content},
+            isEvaluation=#{isEvaluation},
+            hierarchy=#{hierarchy}
+        WHERE taskid = #{taskid}
+    </update>
+
+    <select id="getEvaluationByTaskid" parameterType="int" resultType="com.ssm.po.MyEvaluation">
+        SELECT * FROM evaluation e WHERE e.`taskid`=#{taskid}
+    </select>
+</mapper>

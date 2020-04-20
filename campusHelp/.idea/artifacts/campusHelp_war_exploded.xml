@@ -1,0 +1,52 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" build-on-make="true" name="campusHelp:war exploded">
+    <output-path>$PROJECT_DIR$/out/artifacts/campusHelp_war_exploded</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="campusHelp" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="module" name="aopalliance-1.0.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="aspectj-1.6.12.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="aspectjweaver-1.6.2.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="cglib-nodep-2.2.3.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="commons-dbcp-1.4.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="commons-fileupload-1.2.1.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="commons-logging-1.1.1.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="commons-pool-1.6.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="jsqlparser-0.9.4.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="jstl-1.2.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="log4j-1.2.16.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="mybatis-3.2.6.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="mybatis-spring-1.1.1.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="pagehelper-4.1.6.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="slf4j-api-1.6.1.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="slf4j-log4j12-1.6.1.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-aop-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-aspects-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-beans-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-context-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-context-support-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-core-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-expression-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-instrument-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-instrument-tomcat-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-jdbc-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-jms-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-messaging-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-orm-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-oxm-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-test-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-tx-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-web-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-webmvc-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="spring-websocket-4.1.4.RELEASE.jar" module-name="campusHelp" />
+          <element id="library" level="module" name="standard-1.1.2.jar" module-name="campusHelp" />
+        </element>
+      </element>
+      <element id="library" level="module" name="mysql-connector-java-5.1.20-bin.jar" module-name="campusHelp" />
+      <element id="javaee-facet-resources" facet="campusHelp/web/Web" />
+    </root>
+  </artifact>
+</component>

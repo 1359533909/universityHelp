@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.ssm.mapper.WithdrawMapper" >
+    <insert id="insertWithdraw" parameterType="com.ssm.po.Withdraw">
+        INSERT INTO withdraw
+        (orderId,studentid,schoolid,NAME,amount,isWithdraw)
+        VALUES (#{orderId},#{studentid},#{schoolid},#{name},#{amount},#{isWithdraw})
+    </insert>
+
+    <select id="selectAmountByStudentid" parameterType="String" resultType="int">
+        SELECT amount	FROM withdraw WHERE studentid = #{studentid} AND isWithdraw = 0
+    </select>
+
+    <select id="selectAllWithdraw" resultType="com.ssm.po.Withdraw">
+        SELECT * FROM withdraw
+    </select>
+
+    <update id="updateAdminWithdrawByOrderId" parameterType="com.ssm.po.Withdraw">
+        update withdraw
+        set adminAcount = #{adminAcount},
+        adminName = #{adminName},
+        isWithdraw = #{isWithdraw}
+        where orderId = #{orderId}
+    </update>
+</mapper>
